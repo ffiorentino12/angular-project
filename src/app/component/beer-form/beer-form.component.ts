@@ -27,7 +27,7 @@ export class BeerFormComponent implements OnInit {
       beerName: beerFromForm.beerName!,
       beerStyle : beerFromForm.beerStyle!,
       upc : beerFromForm.upc!,
-      price : beerFromForm.price!
+      price : beerFromForm.price!,
       createdDate: new Date(),
       lastModifiedDate: new Date(),
       id: this.beerService.generateId(),

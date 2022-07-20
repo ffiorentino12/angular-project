@@ -1,6 +1,6 @@
 <li class="list-group-item">
   <div>
-    <label class="lead mb-2">{{ beer.beerName }}</label>
+    <label class="lead mb-2">{{ beer.beerName | uppercase  }}</label> 
   </div>
   <br />
   <div>
@@ -17,7 +17,7 @@
         <tr class="table-active">
           <td>{{ beer.beerStyle }}</td>
           <td>{{ beer.upc }}</td>
-          <td>${{ beer.price }}</td>
+          <td>{{ beer.price | currency:'USD'}}</td>
           <td>{{ beer.lastModifiedDate | date }}</td>
         </tr>
       </tbody>
