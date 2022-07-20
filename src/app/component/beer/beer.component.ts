@@ -12,7 +12,10 @@ export class BeerComponent implements OnInit {
   @Input() beer: Beer;
 
 
-  constructor(private beerService: BeerService) { }
+  beers: Beer[];
+  constructor(private beerService: BeerService) { 
+    this.beers = this.beerService.getBeersList()
+  }
 
   ngOnInit() {
   }

@@ -16,4 +16,8 @@ export class BeerService {
     this.beers = this.beers.filter( beer => beer.id !== item.id);
     console.log(this.beers);
   }
+
+  addBeer(beer: Beer) {
+    
+  }
 }

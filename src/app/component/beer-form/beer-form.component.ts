@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 import { beersData } from '../../data/beer-list';
-import { Beer } from '../../model/model';
+import { allBeerTypes, Beer, BeerForm } from '../../model/model';
 import { BeerService } from '../../services/beer.service';
 
 @Component({
@@ -10,9 +11,12 @@ import { BeerService } from '../../services/beer.service';
 })
 export class BeerFormComponent implements OnInit {
 
-  beers: Beer[];
-  constructor(private beerService: BeerService) {
-    this.beers = this.beerService.getBeersList();
+  beerTypes = allBeerTypes;
+  beerForm: FormGroup<BeerForm>
+
+  
+  constructor() {
+    ;
   }
 
   ngOnInit() {
