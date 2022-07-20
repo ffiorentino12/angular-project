@@ -5,7 +5,7 @@
       <form [formGroup]="beerForm">
         <input
           type="text"
-          class="form-control"
+          class="form-control mb-3"
           placeholder="Beer title"
           [ngClass]="
             beerForm.controls.beerName.invalid &&
@@ -17,7 +17,7 @@
         />
         <input
           type="text"
-          class="form-control"
+          class="form-control mb-3"
           placeholder="Upc code"
           [ngClass]="
             beerForm.controls.upc.invalid &&
@@ -29,7 +29,7 @@
         />
         <input
           type="number"
-          class="form-control"
+          class="form-control mb-3"
           placeholder="Price of beer"
           [ngClass]="
             beerForm.controls.price.invalid &&
@@ -39,6 +39,21 @@
           "
           formControlName="price"
         />
+
+        <select>
+          class="form-select mb-3"
+          placeholder="BeerStyle select"
+          [ngClass]="
+            beerForm.controls.beerStyle.invalid &&
+            beerForm.controls.beerStyle.touched
+              ? 'is-invalid'
+              : ''
+          "
+          formControlName="beerStyle"
+        </select> 
+
+        
+
       </form>
     </div>
   </div>
