@@ -18,7 +18,7 @@ export class BeerService {
   }
 
   addBeer(beer: Beer) {
-    this.beers.unshift(beer)
+    this.beers.unshift(beer);
   }
 
   generateId() {

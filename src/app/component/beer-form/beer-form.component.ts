@@ -15,7 +15,7 @@ export class BeerFormComponent implements OnInit {
   beerForm: FormGroup<BeerForm>
 
   
-  constructor() {}
+  constructor(private beerService: BeerService) {}
 
   ngOnInit() {
     this.beerForm = this.initForm();
@@ -30,11 +30,9 @@ export class BeerFormComponent implements OnInit {
       price : beerFromForm.price!
       createdDate: new Date(),
       lastModifiedDate: new Date(),
-
-    }
-
-    
-
+      id: this.beerService.generateId(),
+     }
+     this.beerService.addBeer(beer)
   }
 
   private initForm(): FormGroup<BeerForm> {
