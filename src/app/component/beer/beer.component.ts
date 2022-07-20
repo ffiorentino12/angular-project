@@ -17,7 +17,7 @@ export class BeerComponent implements OnInit {
   ngOnInit() {
   }
 
-  onDelete(beer: Beer) {
+  OnDelete(beer: Beer) {
     this.beerService.deleteBeer(beer);
 
   }
