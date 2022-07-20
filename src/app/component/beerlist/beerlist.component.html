@@ -3,7 +3,7 @@
   <h5 class="card-header"> Beer List </h5>
   <div class="card-body">
     <ul *ngFor = "let item of beers">
-       <li> {{ item.beerName }} </li>
+      <app-beer [beer]="beer"></app-beer>
       </ul>
   </div>
 </div>
