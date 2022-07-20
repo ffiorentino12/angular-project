@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { beersData } from '../../data/beer-list';
 import { Beer } from '../../model/model';
+import { BeerService } from '../../services/beer.service';
 
 @Component({
   selector: 'app-beerlist',
@@ -8,10 +9,9 @@ import { Beer } from '../../model/model';
   styleUrls: ['./beerlist.component.css']
 })
 export class BeerlistComponent implements OnInit {
-  
-  beers: Beer[] = beersData;
 
-  constructor() { }
+
+  constructor(public beerService: BeerService) { }
 
   ngOnInit() {
   }
