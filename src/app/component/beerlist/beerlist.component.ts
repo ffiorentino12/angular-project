@@ -11,6 +11,7 @@ import { BeerService } from '../../services/beer.service';
 export class BeerlistComponent implements OnInit {
 
   subtTitle='';
+  selectedBeer: any;
 
 
   constructor(public beerService: BeerService) { }
@@ -19,7 +20,8 @@ export class BeerlistComponent implements OnInit {
   }
   mihannoCliccato( beer: Beer) {
     this.subtTitle = '-' + beer.beerName;
-    console.log("Cliccato: " + {beer})
+    this.selectedBeer = beer;
+    console.log('Cliccato' + {beer });
   }
 
 }
