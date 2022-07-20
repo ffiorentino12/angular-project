@@ -1,11 +1,8 @@
-
-<div class="card shadow" >
-  <h5 class="card-header"> Beer List {{subtTitle}}  </h5> 
-  <div class="card-body">
-    <ul class="list-group" *ngFor = "let beer of beerService.beers">
+<div class="card shadow">
+  <h5 class="card-header">Beer List {{ subtTitle }}</h5>
+  <div class="card-body" *ngIf="!selectedBeer">
+    <ul class="list-group" *ngFor="let beer of beerService.beers">
       <app-beer (cliccato)="mihannoCliccato($event)" [beer]="beer"> </app-beer>
-      </ul>
+    </ul>
   </div>
 </div>
-
-
