@@ -26,7 +26,7 @@ export class BeerFormComponent implements OnInit {
       beerName: new FormControl(null, Validators.required), // senza BeerName non posso andare avanti , ho il validatore
       beerStyle: new FormControl(null, Validators.required),
       upc: new FormControl(null, Validators.required),
-      price: new FormControl(null, [Validators.required, Validators.min(0)])
+      price: new FormControl(null, [Validators.required, Validators.min(1)])
     })
   }
 
