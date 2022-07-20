@@ -10,7 +10,7 @@ import { BeerService } from '../../services/beer.service';
 export class BeerComponent implements OnInit {
   
   @Input() beer: Beer;
-  @Output() cliccato = new EventEmitter<string>();
+  @Output() cliccato = new EventEmitter<Beer>();
 
 
   beers: Beer[];
