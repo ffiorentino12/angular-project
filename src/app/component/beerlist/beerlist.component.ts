@@ -17,9 +17,9 @@ export class BeerlistComponent implements OnInit {
 
   ngOnInit() {
   }
-  mihannoCliccato( variabile: string) {
-    this.subtTitle = '-' + variabile;
-    console.log("Cliccato: " + variabile)
+  mihannoCliccato( beer: Beer) {
+    this.subtTitle = '-' + beer.beerName;
+    console.log("Cliccato: " + {beer})
   }
 
 }
