@@ -14,6 +14,8 @@ export class BeerlistComponent implements OnInit {
   selectedBeer: any;
 
 
+
+
   constructor(public beerService: BeerService) { }
 
   ngOnInit() {
@@ -22,7 +24,6 @@ export class BeerlistComponent implements OnInit {
   mihannoCliccato( beer: Beer) {
     this.subtTitle = '-' + beer.beerName;
     this.selectedBeer = beer;
-    console.log({beer});
   }
 
 }
