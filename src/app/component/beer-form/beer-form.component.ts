@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { beersData } from '../../data/beer-list';
 import { allBeerTypes, Beer, BeerForm } from '../../model/model';
 import { BeerService } from '../../services/beer.service';
@@ -15,11 +15,19 @@ export class BeerFormComponent implements OnInit {
   beerForm: FormGroup<BeerForm>
 
   
-  constructor() {
-    ;
-  }
+  constructor() {}
 
   ngOnInit() {
+    this.beerForm = this.initForm();
+  }
+
+  private initForm(): FormGroup<BeerForm> {
+    return new FormGroup<BeerForm>({
+      beerName: new FormControl(null, Validators.required), // senza BeerName non posso andare avanti , ho il validatore
+      beerStyle: new FormControl(null, Validators.required),
+      upc: new FormControl(null, Validators.required),
+      price: new FormControl(null, Validators.required)
+    })
   }
 
 }

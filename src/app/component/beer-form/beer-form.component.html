@@ -1,3 +1,13 @@
-<button>
-Press add to add Beerrr!
-</button>
+<div class="card shadow">
+  <div class="card-header">
+    Add Bear
+    <div class="card-body">
+      <form [formGroup]="beerForm"> </form>
+      <input 
+        type="text"
+        class="form-control"
+        formControlName="beerName"
+      /> 
+
+  </div>
+</div>
