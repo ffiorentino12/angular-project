@@ -5,6 +5,7 @@
       <form [formGroup]="beerForm">
         <input type="text" class="form-control" 
         placeholder="Beer title"
+        [ngClass]="beerForm.controls.beerName.valid ? '' : 'is-invalid' "
         formControlName="beerName" />
       </form>
     </div>
