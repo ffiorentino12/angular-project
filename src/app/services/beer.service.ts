@@ -18,6 +18,12 @@ export class BeerService {
   }
 
   addBeer(beer: Beer) {
-    
+    this.beers.unshift(beer)
   }
+
+  generateId() {
+    const maxId = Math.max(...this.beers.map(beer => beer.id))
+    return maxId +1;
+  }
+  //Essendo un array , con i 3 punti lo svuota
 }

@@ -21,6 +21,22 @@ export class BeerFormComponent implements OnInit {
     this.beerForm = this.initForm();
   }
 
+  onSubmit() {
+    const beerFromForm = this.beerForm.value;
+    const beer : Beer = {
+      beerName: beerFromForm.beerName!,
+      beerStyle : beerFromForm.beerStyle!,
+      upc : beerFromForm.upc!,
+      price : beerFromForm.price!
+      createdDate: new Date(),
+      lastModifiedDate: new Date(),
+
+    }
+
+    
+
+  }
+
   private initForm(): FormGroup<BeerForm> {
     return new FormGroup<BeerForm>({
       beerName: new FormControl(null, Validators.required), // senza BeerName non posso andare avanti , ho il validatore
@@ -29,5 +45,7 @@ export class BeerFormComponent implements OnInit {
       price: new FormControl(null, [Validators.required, Validators.min(1), Validators.max(170)])
     })
   }
+
+ 
 
 }
