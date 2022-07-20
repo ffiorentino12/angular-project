@@ -8,7 +8,7 @@ import { Beer } from '../../model/model';
 })
 export class BeerComponent implements OnInit {
   
-  @Input() beer: Beer
+  @Input() beer: Beer;
 
 
   constructor() { }

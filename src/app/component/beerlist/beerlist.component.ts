@@ -8,6 +8,7 @@ import { Beer } from '../../model/model';
   styleUrls: ['./beerlist.component.css']
 })
 export class BeerlistComponent implements OnInit {
+  
   beers: Beer[] = beersData;
 
   constructor() { }
