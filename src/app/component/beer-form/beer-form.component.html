@@ -3,10 +3,42 @@
     Add Bear
     <div class="card-body">
       <form [formGroup]="beerForm">
-        <input type="text" class="form-control" 
-        placeholder="Beer title"
-        [ngClass]="beerForm.controls.beerName.valid ? '' : 'is-invalid' "
-        formControlName="beerName" />
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Beer title"
+          [ngClass]="
+            beerForm.controls.beerName.invalid &&
+            beerForm.controls.beerName.touched
+              ? 'is-invalid'
+              : ''
+          "
+          formControlName="beerName"
+        />
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Upc code"
+          [ngClass]="
+            beerForm.controls.upc.invalid &&
+            beerForm.controls.upc.touched
+              ? 'is-invalid'
+              : ''
+          "
+          formControlName="upc"
+        />
+        <input
+          type="number"
+          class="form-control"
+          placeholder="Price of beer"
+          [ngClass]="
+            beerForm.controls.price.invalid &&
+            beerForm.controls.price.touched
+              ? 'is-invalid'
+              : ''
+          "
+          formControlName="price"
+        />
       </form>
     </div>
   </div>
