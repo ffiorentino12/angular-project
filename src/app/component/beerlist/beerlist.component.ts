@@ -15,5 +15,8 @@ export class BeerlistComponent implements OnInit {
 
   ngOnInit() {
   }
+  mihannoCliccato() {
+    console.log("Cliccato")
+  }
 
 }
