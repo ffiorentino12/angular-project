@@ -10,13 +10,16 @@ import { BeerService } from '../../services/beer.service';
 })
 export class BeerlistComponent implements OnInit {
 
+  subtTitle='';
+
 
   constructor(public beerService: BeerService) { }
 
   ngOnInit() {
   }
-  mihannoCliccato() {
-    console.log("Cliccato")
+  mihannoCliccato( variabile: string) {
+    this.subtTitle = '-' + variabile;
+    console.log("Cliccato: " + variabile)
   }
 
 }
