@@ -40,7 +40,6 @@
 
         <select
           class="form-select mb-3"
-          placeholder="BeerStyle select"
           [ngClass]="
             beerForm.controls.beerStyle.invalid &&
             beerForm.controls.beerStyle.touched
@@ -49,6 +48,7 @@
           "
           formControlName="beerStyle"
         >
+        <option [ngValue]="null" disabled> Choose your Beer Style </option>
           <option *ngFor="let beerStyle of beerTypes" [ngValue]="beerStyle "> {{beerStyle}} </option>
         </select>
       </form>
