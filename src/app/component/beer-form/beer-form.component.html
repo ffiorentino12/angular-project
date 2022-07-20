@@ -20,8 +20,7 @@
           class="form-control mb-3"
           placeholder="Upc code"
           [ngClass]="
-            beerForm.controls.upc.invalid &&
-            beerForm.controls.upc.touched
+            beerForm.controls.upc.invalid && beerForm.controls.upc.touched
               ? 'is-invalid'
               : ''
           "
@@ -32,8 +31,7 @@
           class="form-control mb-3"
           placeholder="Price of beer"
           [ngClass]="
-            beerForm.controls.price.invalid &&
-            beerForm.controls.price.touched
+            beerForm.controls.price.invalid && beerForm.controls.price.touched
               ? 'is-invalid'
               : ''
           "
@@ -49,11 +47,10 @@
               ? 'is-invalid'
               : ''
           "
-          formControlName="beerStyle" >
-        </select> 
-
-        
-
+          formControlName="beerStyle"
+        >
+          <option *ngFor="let beerSryle of beerTypes" [ngValue]="beerStyle "> {{beerStyle}} </option>
+        </select>
       </form>
     </div>
   </div>
