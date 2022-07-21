@@ -3,7 +3,7 @@ import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { beersData } from '../data/beer-list';
 import { Beer } from '../model/model';
-import { deleteBeerAction } from '../store/actions';
+import { addBeerAction, deleteBeerAction } from '../store/actions';
 import { beerSelectors } from '../store/selectors';
 
 @Injectable( { providedIn: 'root' })
@@ -19,14 +19,16 @@ export class BeerService {
   deleteBeer(item: Beer) {
     this.store.dispatch(deleteBeerAction({id : item.id}));
   };
-
     /*
     this.beers = this.beers.filter( beer => beer.id !== item.id);
     console.log(this.beers);
   } */
 
-  addBeer(beer: Beer) {
-    this.beers.unshift(beer);
+  addBeer(item: Beer) {
+
+    this.store.dispatch(addBeerAction(item));
+
+    //this.beers.unshift(beer);
   }
 
   generateId() {
