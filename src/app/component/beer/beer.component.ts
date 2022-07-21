@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Beer } from '../../model/model';
 import { BeerService } from '../../services/beer.service';
 
@@ -13,7 +14,7 @@ export class BeerComponent implements OnInit {
   @Output() cliccato = new EventEmitter<Beer>();
 
 
-  beers: Beer[];
+  beers: Observable<Beer[]>;
   constructor(private beerService: BeerService) { 
     this.beers = this.beerService.getBeersList()
   }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { beersData } from '../../data/beer-list';
 import { Beer } from '../../model/model';
 import { BeerService } from '../../services/beer.service';
@@ -16,7 +17,8 @@ export class BeerlistComponent implements OnInit {
 
 
 
-  constructor(public beerService: BeerService) { }
+  constructor(public beerService: BeerService) { 
+  }
 
   ngOnInit() {
   }
