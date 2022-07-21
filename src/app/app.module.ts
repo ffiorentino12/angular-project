@@ -10,10 +10,10 @@ import { BeerFormComponent } from './component/beer-form/beer-form.component';
 import { BeerComponent } from './component/beer/beer.component';
 import { StoreModule } from '@ngrx/store';
 import { AppState } from './model/state';
-import { beerReducers } from './store/reducers';
+import { deleteReduce } from './store/reducers';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, AppRoutingModule, ReactiveFormsModule, StoreModule.forRoot<AppState>({ beerState:beerReducers })],
+  imports:      [ BrowserModule, FormsModule, AppRoutingModule, ReactiveFormsModule, StoreModule.forRoot<AppState>({ beerState:deleteReduce })],
   declarations: [ AppComponent, HelloComponent, BeerlistComponent, BeerFormComponent, BeerComponent],
   bootstrap:    [ AppComponent ]
 })
