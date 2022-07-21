@@ -44,7 +44,7 @@ export const addReduce = createReducer(
 
     return {
 
-      state,
+    ...state,
 
       list: [...state.list, arg.beer],
 
