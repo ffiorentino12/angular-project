@@ -24,9 +24,9 @@ export class BeerService {
     console.log(this.beers);
   } */
 
-  addBeer(item: Beer) {
+  addBeer(beer: Beer) {
 
-    this.store.dispatch(addBeerAction(item));
+    this.store.dispatch(addBeerAction( {beer: beer }));
 
     //this.beers.unshift(beer);
   }
@@ -36,4 +36,8 @@ export class BeerService {
     return maxId +1;
   }
   //Essendo un array , con i 3 punti lo svuota
+}
+
+function beer(beer: any,item: Beer): { beer: Beer; }&import("@ngrx/store/src/models").TypedAction<"[beer] addBeer"> {
+throw new Error('Function not implemented.');
 }
