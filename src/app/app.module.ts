@@ -13,7 +13,7 @@ import { AppState } from './model/state';
 import { beerReducers } from './store/reducers';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, AppRoutingModule, ReactiveFormsModule, StoreModule.forRoot<AppState>({beerState:beerReducers})],
+  imports:      [ BrowserModule, FormsModule, AppRoutingModule, ReactiveFormsModule, StoreModule.forRoot<AppState>({ beerState:beerReducers })],
   declarations: [ AppComponent, HelloComponent, BeerlistComponent, BeerFormComponent, BeerComponent],
   bootstrap:    [ AppComponent ]
 })

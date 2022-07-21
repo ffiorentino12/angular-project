@@ -1,7 +1,7 @@
 <div class="card shadow">
   <h5 class="card-header">Beer List {{ subtTitle }}</h5>
   <div class="card-body" *ngIf="!selectedBeer">
-    <ul class="list-group" *ngFor="let beer of beerService.beers">
+    <ul class="list-group" *ngFor="let beer of beerService.getBeersList() | async ">
       <app-beer (cliccato)="mihannoCliccato($event)" [beer]="beer"> </app-beer>
     </ul>
   </div>
