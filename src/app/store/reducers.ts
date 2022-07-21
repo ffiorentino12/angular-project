@@ -17,40 +17,19 @@ export const deleteReduce = createReducer(
     ...stateBeers,
 
     list: stateBeers.list.filter((beer) => beer.id != arg.id),
-  }))
-);
-
-/*
-export const addReduce = createReducer(
-  initialBeerState,
-  on(Actions.addBeerAction, (stateBeers, arg: { beer: Beer }) => ({
-    ...stateBeers,
-    list: pushBeer(stateBeers, arg.beer),
-  }))
-);
-
-function pushBeer(stateBeers: BeerState, beer: Beer): Beer[] {
-  stateBeers.list.push(beer);
-  return stateBeers.list;
-}
-*/
-
-
-export const addReduce = createReducer(
-  initialBeerState,
+  })),
   on(Actions.addBeerAction, (state: BeerState, arg: { beer: Beer }) => {
 
     //state.list.push(arg.beer);
 
     return {
 
-    ...state,
+      state,
 
       list: [...state.list, arg.beer],
 
     };
 
-  }))
-  
+  })
+);
 
- 
