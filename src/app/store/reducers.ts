@@ -39,14 +39,13 @@ function pushBeer(stateBeers: BeerState, beer: Beer): Beer[] {
 export const addReduce = createReducer(
   initialBeerState,
   on(Actions.addBeerAction, (stateBeers, arg: { beer: Beer }) => ({
-    state.list.push(arg.beer),
     return {
-      ...stateBeers,
-    list: [state.list,
+      ...state,
+    list: [...state.list, arg.beer],
     };
   })
-  ));
-
+  );
   */
+  
 
  
