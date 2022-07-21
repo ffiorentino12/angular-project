@@ -20,7 +20,7 @@ export const deleteReduce = createReducer(
   }))
 );
 
-
+/*
 export const addReduce = createReducer(
   initialBeerState,
   on(Actions.addBeerAction, (stateBeers, arg: { beer: Beer }) => ({
@@ -33,19 +33,24 @@ function pushBeer(stateBeers: BeerState, beer: Beer): Beer[] {
   stateBeers.list.push(beer);
   return stateBeers.list;
 }
+*/
 
 
-/*
 export const addReduce = createReducer(
   initialBeerState,
-  on(Actions.addBeerAction, (stateBeers, arg: { beer: Beer }) => ({
+  on(Actions.addBeerAction, (state: BeerState, arg: { beer: Beer }) => {
+
+    //state.list.push(arg.beer);
+
     return {
-      ...state,
-    list: [...state.list, arg.beer],
+
+      state,
+
+      list: [...state.list, arg.beer],
+
     };
-  })
-  );
-  */
+
+  }))
   
 
  
